@@ -1,0 +1,252 @@
+<center><h2>*** Performance Report ***</h2></center><br>
+<A HREF="perf.html">Overall performance report</A><br>
+<A HREF="stat_client0.html">Main client (localhost) statistics</A><br>
+<A HREF="stat_client1.html">client1 (rc1) statistics</A><br>
+<p><br>&nbsp&nbsp&nbsp<A HREF="perf.html#node">Node information</A><br>
+&nbsp&nbsp&nbsp<A HREF="#time">Test timing information</A><br>
+&nbsp&nbsp&nbsp<A HREF="#up_stat">Up ramp statistics</A><br>
+&nbsp&nbsp&nbsp<A HREF="#run_stat">Runtime session statistics</A><br>
+&nbsp&nbsp&nbsp<A HREF="#down_stat">Down ramp statistics</A><br>
+&nbsp&nbsp&nbsp<A HREF="#all_stat">Overall statistics</A><br>
+&nbsp&nbsp&nbsp<A HREF="#cpu_graph">CPU usage graphs</A><br>
+&nbsp&nbsp&nbsp<A HREF="#procs_graph">Processes usage graphs</A><br>
+&nbsp&nbsp&nbsp<A HREF="#mem_graph">Memory usage graph</A><br>
+&nbsp&nbsp&nbsp<A HREF="#disk_graph">Disk usage graphs</A><br>
+&nbsp&nbsp&nbsp<A HREF="#net_graph">Network usage graphs</A><br>
+<br><p><A NAME="time"></A><h3>Test timing information</h3><p>
+<TABLE BORDER=1>
+<TR><TD><B>Test start</B><TD>2014-11-28 17:20:56
+<TR><TD><B>Up ramp start</B><TD>2014-11-28 17:21:0
+<TR><TD><B>Runtime session start</B><TD>2014-11-28 17:21:15
+<TR><TD><B>Down ramp start</B><TD>2014-11-28 17:22:45
+<TR><TD><B>Test end</B><TD>2014-11-28 17:23:41
+<TR><TD><B>Up ramp length</B><TD>     15 seconds 1 millisecond  (requested 15000 ms)
+<TR><TD><B>Runtime session length</B><TD>    1 minute 30 seconds 1 millisecond  (requested 90000 ms)
+<TR><TD><B>Down ramp length</B><TD>     15 seconds 0 millisecond  (requested 15000 ms)
+<TR><TD><B>Total test length</B><TD>    2 minutes 45 seconds 374 milliseconds 
+</TABLE><p>
+<br><A NAME="up_stat"></A>
+<br><h3>Up ramp statistics</h3><p>
+<TABLE BORDER=1>
+<THEAD><TR><TH>State name<TH>% of total<TH>Count<TH>Errors<TH>Minimum Time<TH>Maximum Time<TH>Average Time<TBODY>
+<TR><TD><div align=left>StoriesOfTheDay</div><TD><div align=right>30 %</div><TD><div align=right>1403</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>290 ms</div><TD><div align=right>31 ms</div>
+<TR><TD><div align=left>Register</div><TD><div align=right>1 %</div><TD><div align=right>46</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>7 ms</div><TD><div align=right>1 ms</div>
+<TR><TD><div align=left>RegisterUser</div><TD><div align=right>0 %</div><TD><div align=right>29</div><TD><div align=right>0</div><TD><div align=right>30 ms</div><TD><div align=right>342 ms</div><TD><div align=right>62 ms</div>
+<TR><TD><div align=left>Browse</div><TD><div align=right>4 %</div><TD><div align=right>212</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>169 ms</div><TD><div align=right>3 ms</div>
+<TR><TD><div align=left>BrowseCategories</div><TD><div align=right>1 %</div><TD><div align=right>66</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>27 ms</div><TD><div align=right>4 ms</div>
+<TR><TD><div align=left>BrowseStoriesInCategory</div><TD><div align=right>1 %</div><TD><div align=right>47</div><TD><div align=right>0</div><TD><div align=right>19 ms</div><TD><div align=right>58 ms</div><TD><div align=right>15 ms</div>
+<TR><TD><div align=left>OlderStories</div><TD><div align=right>1 %</div><TD><div align=right>70</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>27 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>ViewStory</div><TD><div align=right>21 %</div><TD><div align=right>955</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>174 ms</div><TD><div align=right>10 ms</div>
+<TR><TD><div align=left>PostComment</div><TD><div align=right>5 %</div><TD><div align=right>243</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>60 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>StoreComment</div><TD><div align=right>3 %</div><TD><div align=right>160</div><TD><div align=right>0</div><TD><div align=right>30 ms</div><TD><div align=right>423 ms</div><TD><div align=right>45 ms</div>
+<TR><TD><div align=left>ViewComment</div><TD><div align=right>8 %</div><TD><div align=right>377</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>48 ms</div><TD><div align=right>7 ms</div>
+<TR><TD><div align=left>ModerateComment</div><TD><div align=right>0 %</div><TD><div align=right>19</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>35 ms</div><TD><div align=right>6 ms</div>
+<TR><TD><div align=left>StoreModerateLog</div><TD><div align=right>0 %</div><TD><div align=right>9</div><TD><div align=right>0</div><TD><div align=right>33 ms</div><TD><div align=right>315 ms</div><TD><div align=right>55 ms</div>
+<TR><TD><div align=left>SubmitStory</div><TD><div align=right>2 %</div><TD><div align=right>102</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>14 ms</div><TD><div align=right>4 ms</div>
+<TR><TD><div align=left>StoreStory</div><TD><div align=right>1 %</div><TD><div align=right>66</div><TD><div align=right>0</div><TD><div align=right>23 ms</div><TD><div align=right>497 ms</div><TD><div align=right>38 ms</div>
+<TR><TD><div align=left>Search</div><TD><div align=right>3 %</div><TD><div align=right>146</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>150 ms</div><TD><div align=right>3 ms</div>
+<TR><TD><div align=left>SearchInStories</div><TD><div align=right>1 %</div><TD><div align=right>69</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>28 ms</div><TD><div align=right>6 ms</div>
+<TR><TD><div align=left>SearchInComments</div><TD><div align=right>0 %</div><TD><div align=right>44</div><TD><div align=right>0</div><TD><div align=right>6 ms</div><TD><div align=right>46 ms</div><TD><div align=right>13 ms</div>
+<TR><TD><div align=left>SearchInUsers</div><TD><div align=right>0 %</div><TD><div align=right>5</div><TD><div align=right>0</div><TD><div align=right>7 ms</div><TD><div align=right>7 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>Author (login)</div><TD><div align=right>0 %</div><TD><div align=right>16</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>28 ms</div><TD><div align=right>4 ms</div>
+<TR><TD><div align=left>Author (task)</div><TD><div align=right>0 %</div><TD><div align=right>15</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>5 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>ReviewStories</div><TD><div align=right>0 %</div><TD><div align=right>8</div><TD><div align=right>0</div><TD><div align=right>14 ms</div><TD><div align=right>16 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>AcceptStory</div><TD><div align=right>0 %</div><TD><div align=right>1</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left>RejectStory</div><TD><div align=right>0 %</div><TD><div align=right>2</div><TD><div align=right>0</div><TD><div align=right>35 ms</div><TD><div align=right>38 ms</div><TD><div align=right>36 ms</div>
+<TR><TD><div align=left>Back probability</div><TD><div align=right>3 %</div><TD><div align=right>162</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left>End of Session</div><TD><div align=right>5 %</div><TD><div align=right>265</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left><B>Total</B></div><TD><div align=right><B>100 %</B></div><TD><div align=right><B>4537</B></div><TD><div align=right><B>0</B></div><TD><div align=center>-</div><TD><div align=center>-</div><TD><div align=right><B>16 ms</B></div>
+<TR><TD><div align=left><B>Average throughput</div></B><TD colspan=6><div align=center><B>302 req/s</B></div>
+<TR><TD><div align=left>Completed sessions</div><TD colspan=6><div align=left>198</div>
+<TR><TD><div align=left>Total time</div><TD colspan=6><div align=left>1459 seconds</div>
+<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>7 seconds</B></div>
+</TABLE><p>
+<br><A NAME="run_stat"></A>
+<br><h3>Runtime session statistics</h3><p>
+<TABLE BORDER=1>
+<THEAD><TR><TH>State name<TH>% of total<TH>Count<TH>Errors<TH>Minimum Time<TH>Maximum Time<TH>Average Time<TBODY>
+<TR><TD><div align=left>StoriesOfTheDay</div><TD><div align=right>16 %</div><TD><div align=right>2343</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>57 ms</div><TD><div align=right>11 ms</div>
+<TR><TD><div align=left>Register</div><TD><div align=right>1 %</div><TD><div align=right>165</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>25 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>RegisterUser</div><TD><div align=right>1 %</div><TD><div align=right>173</div><TD><div align=right><B>2</B></div><TD><div align=right>4 ms</div><TD><div align=right>213 ms</div><TD><div align=right>46 ms</div>
+<TR><TD><div align=left>Browse</div><TD><div align=right>5 %</div><TD><div align=right>711</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>25 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>BrowseCategories</div><TD><div align=right>1 %</div><TD><div align=right>255</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>35 ms</div><TD><div align=right>6 ms</div>
+<TR><TD><div align=left>BrowseStoriesInCategory</div><TD><div align=right>2 %</div><TD><div align=right>416</div><TD><div align=right>0</div><TD><div align=right>14 ms</div><TD><div align=right>446 ms</div><TD><div align=right>29 ms</div>
+<TR><TD><div align=left>OlderStories</div><TD><div align=right>3 %</div><TD><div align=right>501</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>371 ms</div><TD><div align=right>11 ms</div>
+<TR><TD><div align=left>ViewStory</div><TD><div align=right>16 %</div><TD><div align=right>2278</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>460 ms</div><TD><div align=right>16 ms</div>
+<TR><TD><div align=left>PostComment</div><TD><div align=right>5 %</div><TD><div align=right>814</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>25 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>StoreComment</div><TD><div align=right>5 %</div><TD><div align=right>818</div><TD><div align=right>0</div><TD><div align=right>20 ms</div><TD><div align=right>540 ms</div><TD><div align=right>80 ms</div>
+<TR><TD><div align=left>ViewComment</div><TD><div align=right>10 %</div><TD><div align=right>1441</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>416 ms</div><TD><div align=right>21 ms</div>
+<TR><TD><div align=left>ModerateComment</div><TD><div align=right>0 %</div><TD><div align=right>78</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>23 ms</div><TD><div align=right>7 ms</div>
+<TR><TD><div align=left>StoreModerateLog</div><TD><div align=right>0 %</div><TD><div align=right>58</div><TD><div align=right>0</div><TD><div align=right>27 ms</div><TD><div align=right>290 ms</div><TD><div align=right>88 ms</div>
+<TR><TD><div align=left>SubmitStory</div><TD><div align=right>2 %</div><TD><div align=right>400</div><TD><div align=right>0</div><TD><div align=right>2 ms</div><TD><div align=right>29 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>StoreStory</div><TD><div align=right>2 %</div><TD><div align=right>315</div><TD><div align=right>0</div><TD><div align=right>19 ms</div><TD><div align=right>473 ms</div><TD><div align=right>50 ms</div>
+<TR><TD><div align=left>Search</div><TD><div align=right>3 %</div><TD><div align=right>536</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>27 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>SearchInStories</div><TD><div align=right>3 %</div><TD><div align=right>430</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>424 ms</div><TD><div align=right>9 ms</div>
+<TR><TD><div align=left>SearchInComments</div><TD><div align=right>1 %</div><TD><div align=right>223</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>437 ms</div><TD><div align=right>34 ms</div>
+<TR><TD><div align=left>SearchInUsers</div><TD><div align=right>0 %</div><TD><div align=right>72</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>337 ms</div><TD><div align=right>12 ms</div>
+<TR><TD><div align=left>Author (login)</div><TD><div align=right>0 %</div><TD><div align=right>80</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>10 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>Author (task)</div><TD><div align=right>0 %</div><TD><div align=right>71</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>25 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>ReviewStories</div><TD><div align=right>0 %</div><TD><div align=right>71</div><TD><div align=right>0</div><TD><div align=right>9 ms</div><TD><div align=right>57 ms</div><TD><div align=right>17 ms</div>
+<TR><TD><div align=left>AcceptStory</div><TD><div align=right>0 %</div><TD><div align=right>43</div><TD><div align=right><B>3</B></div><TD><div align=right>3 ms</div><TD><div align=right>278 ms</div><TD><div align=right>77 ms</div>
+<TR><TD><div align=left>RejectStory</div><TD><div align=right>0 %</div><TD><div align=right>28</div><TD><div align=right><B>3</B></div><TD><div align=right>3 ms</div><TD><div align=right>211 ms</div><TD><div align=right>35 ms</div>
+<TR><TD><div align=left>Back probability</div><TD><div align=right>4 %</div><TD><div align=right>693</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left>End of Session</div><TD><div align=right>6 %</div><TD><div align=right>890</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left><B>Total</B></div><TD><div align=right><B>100 %</B></div><TD><div align=right><B>13903</B></div><TD><div align=right><B>8</B></div><TD><div align=center>-</div><TD><div align=center>-</div><TD><div align=right><B>17 ms</B></div>
+<TR><TD><div align=left><B>Average throughput</div></B><TD colspan=6><div align=center><B>154 req/s</B></div>
+<TR><TD><div align=left>Completed sessions</div><TD colspan=6><div align=left>897</div>
+<TR><TD><div align=left>Total time</div><TD colspan=6><div align=left>39372 seconds</div>
+<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>43 seconds</B></div>
+</TABLE><p>
+<br><A NAME="down_stat"></A>
+<br><h3>Down ramp statistics</h3><p>
+<TABLE BORDER=1>
+<THEAD><TR><TH>State name<TH>% of total<TH>Count<TH>Errors<TH>Minimum Time<TH>Maximum Time<TH>Average Time<TBODY>
+<TR><TD><div align=left>StoriesOfTheDay</div><TD><div align=right>17 %</div><TD><div align=right>405</div><TD><div align=right>0</div><TD><div align=right>6 ms</div><TD><div align=right>46 ms</div><TD><div align=right>11 ms</div>
+<TR><TD><div align=left>Register</div><TD><div align=right>1 %</div><TD><div align=right>31</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>3 ms</div><TD><div align=right>1 ms</div>
+<TR><TD><div align=left>RegisterUser</div><TD><div align=right>1 %</div><TD><div align=right>26</div><TD><div align=right>0</div><TD><div align=right>24 ms</div><TD><div align=right>208 ms</div><TD><div align=right>65 ms</div>
+<TR><TD><div align=left>Browse</div><TD><div align=right>4 %</div><TD><div align=right>104</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>21 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>BrowseCategories</div><TD><div align=right>1 %</div><TD><div align=right>47</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>11 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>BrowseStoriesInCategory</div><TD><div align=right>2 %</div><TD><div align=right>69</div><TD><div align=right>0</div><TD><div align=right>17 ms</div><TD><div align=right>57 ms</div><TD><div align=right>28 ms</div>
+<TR><TD><div align=left>OlderStories</div><TD><div align=right>3 %</div><TD><div align=right>74</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>36 ms</div><TD><div align=right>11 ms</div>
+<TR><TD><div align=left>ViewStory</div><TD><div align=right>15 %</div><TD><div align=right>378</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>397 ms</div><TD><div align=right>14 ms</div>
+<TR><TD><div align=left>PostComment</div><TD><div align=right>5 %</div><TD><div align=right>140</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>22 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>StoreComment</div><TD><div align=right>5 %</div><TD><div align=right>137</div><TD><div align=right>0</div><TD><div align=right>23 ms</div><TD><div align=right>320 ms</div><TD><div align=right>79 ms</div>
+<TR><TD><div align=left>ViewComment</div><TD><div align=right>11 %</div><TD><div align=right>275</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>466 ms</div><TD><div align=right>16 ms</div>
+<TR><TD><div align=left>ModerateComment</div><TD><div align=right>0 %</div><TD><div align=right>11</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>24 ms</div><TD><div align=right>12 ms</div>
+<TR><TD><div align=left>StoreModerateLog</div><TD><div align=right>0 %</div><TD><div align=right>8</div><TD><div align=right>0</div><TD><div align=right>27 ms</div><TD><div align=right>198 ms</div><TD><div align=right>94 ms</div>
+<TR><TD><div align=left>SubmitStory</div><TD><div align=right>2 %</div><TD><div align=right>66</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>9 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>StoreStory</div><TD><div align=right>2 %</div><TD><div align=right>60</div><TD><div align=right>0</div><TD><div align=right>21 ms</div><TD><div align=right>369 ms</div><TD><div align=right>60 ms</div>
+<TR><TD><div align=left>Search</div><TD><div align=right>3 %</div><TD><div align=right>84</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>11 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>SearchInStories</div><TD><div align=right>2 %</div><TD><div align=right>59</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>34 ms</div><TD><div align=right>11 ms</div>
+<TR><TD><div align=left>SearchInComments</div><TD><div align=right>1 %</div><TD><div align=right>29</div><TD><div align=right>0</div><TD><div align=right>7 ms</div><TD><div align=right>137 ms</div><TD><div align=right>34 ms</div>
+<TR><TD><div align=left>SearchInUsers</div><TD><div align=right>0 %</div><TD><div align=right>12</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>13 ms</div><TD><div align=right>10 ms</div>
+<TR><TD><div align=left>Author (login)</div><TD><div align=right>0 %</div><TD><div align=right>12</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>3 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>Author (task)</div><TD><div align=right>0 %</div><TD><div align=right>17</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>9 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>ReviewStories</div><TD><div align=right>0 %</div><TD><div align=right>18</div><TD><div align=right>0</div><TD><div align=right>6 ms</div><TD><div align=right>17 ms</div><TD><div align=right>17 ms</div>
+<TR><TD><div align=left>AcceptStory</div><TD><div align=right>0 %</div><TD><div align=right>18</div><TD><div align=right><B>2</B></div><TD><div align=right>4 ms</div><TD><div align=right>204 ms</div><TD><div align=right>78 ms</div>
+<TR><TD><div align=left>RejectStory</div><TD><div align=right>0 %</div><TD><div align=right>6</div><TD><div align=right><B>2</B></div><TD><div align=right>4 ms</div><TD><div align=right>77 ms</div><TD><div align=right>73 ms</div>
+<TR><TD><div align=left>Back probability</div><TD><div align=right>5 %</div><TD><div align=right>120</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left>End of Session</div><TD><div align=right>6 %</div><TD><div align=right>161</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left><B>Total</B></div><TD><div align=right><B>100 %</B></div><TD><div align=right><B>2367</B></div><TD><div align=right><B>4</B></div><TD><div align=center>-</div><TD><div align=center>-</div><TD><div align=right><B>16 ms</B></div>
+<TR><TD><div align=left><B>Average throughput</div></B><TD colspan=6><div align=center><B>158 req/s</B></div>
+<TR><TD><div align=left>Completed sessions</div><TD colspan=6><div align=left>152</div>
+<TR><TD><div align=left>Total time</div><TD colspan=6><div align=left>10557 seconds</div>
+<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>69 seconds</B></div>
+</TABLE><p>
+<br><A NAME="all_stat"></A>
+<br><h3>Overall statistics</h3><p>
+<TABLE BORDER=1>
+<THEAD><TR><TH>State name<TH>% of total<TH>Count<TH>Errors<TH>Minimum Time<TH>Maximum Time<TH>Average Time<TBODY>
+<TR><TD><div align=left>StoriesOfTheDay</div><TD><div align=right>19 %</div><TD><div align=right>4151</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>290 ms</div><TD><div align=right>18 ms</div>
+<TR><TD><div align=left>Register</div><TD><div align=right>1 %</div><TD><div align=right>242</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>25 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>RegisterUser</div><TD><div align=right>1 %</div><TD><div align=right>228</div><TD><div align=right><B>2</B></div><TD><div align=right>4 ms</div><TD><div align=right>342 ms</div><TD><div align=right>50 ms</div>
+<TR><TD><div align=left>Browse</div><TD><div align=right>4 %</div><TD><div align=right>1027</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>169 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>BrowseCategories</div><TD><div align=right>1 %</div><TD><div align=right>368</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>35 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>BrowseStoriesInCategory</div><TD><div align=right>2 %</div><TD><div align=right>532</div><TD><div align=right>0</div><TD><div align=right>14 ms</div><TD><div align=right>446 ms</div><TD><div align=right>28 ms</div>
+<TR><TD><div align=left>OlderStories</div><TD><div align=right>3 %</div><TD><div align=right>645</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>371 ms</div><TD><div align=right>10 ms</div>
+<TR><TD><div align=left>ViewStory</div><TD><div align=right>17 %</div><TD><div align=right>3613</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>460 ms</div><TD><div align=right>14 ms</div>
+<TR><TD><div align=left>PostComment</div><TD><div align=right>5 %</div><TD><div align=right>1197</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>60 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>StoreComment</div><TD><div align=right>5 %</div><TD><div align=right>1115</div><TD><div align=right>0</div><TD><div align=right>20 ms</div><TD><div align=right>540 ms</div><TD><div align=right>75 ms</div>
+<TR><TD><div align=left>ViewComment</div><TD><div align=right>10 %</div><TD><div align=right>2093</div><TD><div align=right>0</div><TD><div align=right>4 ms</div><TD><div align=right>466 ms</div><TD><div align=right>18 ms</div>
+<TR><TD><div align=left>ModerateComment</div><TD><div align=right>0 %</div><TD><div align=right>108</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>35 ms</div><TD><div align=right>8 ms</div>
+<TR><TD><div align=left>StoreModerateLog</div><TD><div align=right>0 %</div><TD><div align=right>75</div><TD><div align=right>0</div><TD><div align=right>27 ms</div><TD><div align=right>315 ms</div><TD><div align=right>85 ms</div>
+<TR><TD><div align=left>SubmitStory</div><TD><div align=right>2 %</div><TD><div align=right>568</div><TD><div align=right>0</div><TD><div align=right>2 ms</div><TD><div align=right>29 ms</div><TD><div align=right>4 ms</div>
+<TR><TD><div align=left>StoreStory</div><TD><div align=right>2 %</div><TD><div align=right>441</div><TD><div align=right>0</div><TD><div align=right>19 ms</div><TD><div align=right>497 ms</div><TD><div align=right>49 ms</div>
+<TR><TD><div align=left>Search</div><TD><div align=right>3 %</div><TD><div align=right>767</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>150 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>SearchInStories</div><TD><div align=right>2 %</div><TD><div align=right>558</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>424 ms</div><TD><div align=right>9 ms</div>
+<TR><TD><div align=left>SearchInComments</div><TD><div align=right>1 %</div><TD><div align=right>296</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>437 ms</div><TD><div align=right>31 ms</div>
+<TR><TD><div align=left>SearchInUsers</div><TD><div align=right>0 %</div><TD><div align=right>89</div><TD><div align=right>0</div><TD><div align=right>5 ms</div><TD><div align=right>337 ms</div><TD><div align=right>12 ms</div>
+<TR><TD><div align=left>Author (login)</div><TD><div align=right>0 %</div><TD><div align=right>108</div><TD><div align=right>0</div><TD><div align=right>1 ms</div><TD><div align=right>28 ms</div><TD><div align=right>2 ms</div>
+<TR><TD><div align=left>Author (task)</div><TD><div align=right>0 %</div><TD><div align=right>103</div><TD><div align=right>0</div><TD><div align=right>3 ms</div><TD><div align=right>25 ms</div><TD><div align=right>5 ms</div>
+<TR><TD><div align=left>ReviewStories</div><TD><div align=right>0 %</div><TD><div align=right>97</div><TD><div align=right>0</div><TD><div align=right>6 ms</div><TD><div align=right>57 ms</div><TD><div align=right>16 ms</div>
+<TR><TD><div align=left>AcceptStory</div><TD><div align=right>0 %</div><TD><div align=right>62</div><TD><div align=right><B>5</B></div><TD><div align=right>3 ms</div><TD><div align=right>278 ms</div><TD><div align=right>76 ms</div>
+<TR><TD><div align=left>RejectStory</div><TD><div align=right>0 %</div><TD><div align=right>36</div><TD><div align=right><B>5</B></div><TD><div align=right>3 ms</div><TD><div align=right>211 ms</div><TD><div align=right>40 ms</div>
+<TR><TD><div align=left>Back probability</div><TD><div align=right>4 %</div><TD><div align=right>975</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left>End of Session</div><TD><div align=right>6 %</div><TD><div align=right>1316</div><TD><div align=right>0</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div><TD><div align=right>0 ms</div>
+<TR><TD><div align=left><B>Total</B></div><TD><div align=right><B>100 %</B></div><TD><div align=right><B>20810</B></div><TD><div align=right><B>12</B></div><TD><div align=center>-</div><TD><div align=center>-</div><TD><div align=right><B>16 ms</B></div>
+<TR><TD><div align=left><B>Average throughput</div></B><TD colspan=6><div align=center><B>173 req/s</B></div>
+<TR><TD><div align=left>Completed sessions</div><TD colspan=6><div align=left>1316</div>
+<TR><TD><div align=left>Total time</div><TD colspan=6><div align=left>56919 seconds</div>
+<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>43 seconds</B></div>
+</TABLE><p>
+test#####0
+test#####0.2
+test#####0.5
+test#####1
+test#####2
+test#####3
+&nbsp &nbsp Command is: /usr/bin/rsh -x localhost /bin/bash -c 'LANG=en_GB.UTF-8 /usr/local/bin/sar -n DEV -n SOCK -rubcw 1 125 -f /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/web_server.bin > /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/web_server'<br>
+
+&nbsp &nbsp Command is: /usr/bin/rsh -x localhost /bin/bash -c 'LANG=en_GB.UTF-8 /usr/local/bin/sar -n DEV -n SOCK -rubcw 1 125 -f /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/db_server.bin > /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/db_server'<br>
+
+&nbsp &nbsp Command is: /usr/bin/rsh -x localhost /bin/bash -c 'LANG=en_GB.UTF-8 /usr/local/bin/sar -n DEV -n SOCK -rubcw 1 125 -f /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/client0.bin > /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/client0'<br>
+
+&nbsp &nbsp Command is: /usr/bin/rsh -x localhost /bin/bash -c 'LANG=en_GB.UTF-8 /usr/local/bin/sar -n DEV -n SOCK -rubcw 1 125 -f /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/client1.bin > /home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/client1'<br>
+
+hantest<br>
+/home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/<br>
+gif<br>
+2<br>
+Generating data files ... '/home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/db_server' done.<br>
+Generating data files ... '/home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/web_server' done.<br>
+Generating data files ... '/home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/client0' done.<br>
+Generating data files ... '/home/ubuntu/RUBBoS/bench/2014-11-28@17:20:56/client1' done.<br>
+Generating servers CPU idle time graph<br>
+Generating servers CPU busy time graph<br>
+Generating servers CPU user/system time graph<br>
+Generating servers Processes/second graph<br>
+Generating servers Context switches/second graph<br>
+Generating servers Disk total transfers graph<br>
+Generating servers disk read/write requests graph<br>
+Generating servers disk blocks read/write requests graph<br>
+Generating servers Memory usage graph<br>
+Generating servers Memory & cache usage graph<br>
+Generating servers network received/transmitted packets graph<br>
+Generating servers network received/transmitted bytes graph<br>
+Generating servers Sockets usage graph<br>
+Generating clients CPU idle time graph<br>
+Generating clients CPU busy time graph<br>
+Generating clients CPU user/system time graph<br>
+Generating clients Processes/second graph<br>
+Generating clients Context switches/second graph<br>
+Generating clients Disk total transfers graph<br>
+Generating clients disk read/write requests graph<br>
+Generating clients disk blocks read/write requests graph<br>
+Generating clients Memory usage graph<br>
+Generating clients Memory & cache usage graph<br>
+Generating clients network received/transmitted packets graph<br>
+Generating clients network received/transmitted bytes graph<br>
+Generating clients Sockets usage graph<br>
+Erasing temporary files ...<br>
+<br><A NAME="cpu_graph"></A>
+<br><h3>CPU Usage graphs</h3><p>
+<TABLE>
+<TR><TD><IMG SRC="cpu_busy.gif"><TD><IMG SRC="client_cpu_busy.gif">
+<TR><TD><IMG SRC="cpu_idle.gif"><TD><IMG SRC="client_cpu_idle.gif">
+<TR><TD><IMG SRC="cpu_user_kernel.gif"><TD><IMG SRC="client_cpu_user_kernel.gif">
+</TABLE><p>
+<br><A NAME="procs_graph"></A>
+<TABLE>
+<br><h3>Processes Usage graphs</h3><p>
+<TR><TD><IMG SRC="procs.gif"><TD><IMG SRC="client_procs.gif">
+<TR><TD><IMG SRC="ctxtsw.gif"><TD><IMG SRC="client_ctxtsw.gif">
+</TABLE><p>
+<br><A NAME="mem_graph"></A>
+<br><h3>Memory Usage graph</h3><p>
+<TABLE>
+<TR><TD><IMG SRC="mem_usage.gif"><TD><IMG SRC="client_mem_usage.gif">
+<TR><TD><IMG SRC="mem_cache.gif"><TD><IMG SRC="client_mem_cache.gif">
+</TABLE><p>
+<br><A NAME="disk_graph"></A>
+<br><h3>Disk Usage graphs</h3><p>
+<TABLE>
+<TR><TD><IMG SRC="disk_rw_req.gif"><TD><IMG SRC="client_disk_rw_req.gif">
+<TR><TD><IMG SRC="disk_tps.gif"><TD><IMG SRC="client_disk_tps.gif">
+</TABLE><p>
+<br><A NAME="net_graph"></A>
+<br><h3>Network Usage graphs</h3><p>
+<TABLE>
+<TR><TD><IMG SRC="net_rt_byt.gif"><TD><IMG SRC="client_net_rt_byt.gif">
+<TR><TD><IMG SRC="net_rt_pack.gif"><TD><IMG SRC="client_net_rt_pack.gif">
+<TR><TD><IMG SRC="socks.gif"><TD><IMG SRC="client_socks.gif">
+</TABLE><p>
