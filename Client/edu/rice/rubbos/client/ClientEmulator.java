@@ -300,6 +300,7 @@ public class ClientEmulator
     else
     { // Redirect output of remote clients
       System.out.println("Redirecting output to '"+args[0]+"'");
+      System.out.println("[Debug]test : args[0]:'"+args[0]+"'args[1]: '"+args[1]+" '");
       try
       {
         PrintStream outputStream = new PrintStream(new FileOutputStream(args[0]));
@@ -520,6 +521,7 @@ public class ClientEmulator
           read.close();
         }
 
+        System.out.println("[Debug]Test11111");
         PrintStream outputStream = new PrintStream(new FileOutputStream(reportDir+"stat_client0.html"));
         System.setOut(outputStream);
         System.setErr(outputStream);
@@ -547,6 +549,7 @@ public class ClientEmulator
       }
     }
 
+    System.out.println("[Debug]Test2222");
     // Test timing information
     System.out.println("<br><p><A NAME=\"time\"></A><h3>Test timing information</h3><p>");
     System.out.println("<TABLE BORDER=1>");
@@ -644,16 +647,27 @@ public class ClientEmulator
         scpCmd[1] =  client.rubbos.getDBServerName() + ":"+tmpDir+"/db_server";
         p = Runtime.getRuntime().exec(scpCmd);
         p.waitFor();
-        // Fetch html files created by the remote clients
+
+        // Fetch html files created by the remote client
         for (int i = 0 ; i < client.rubbos.getRemoteClients().size() ; i++)
         {
           scpCmd[1] =  (String)client.rubbos.getRemoteClients().get(i)
           + ":"+tmpDir+"trace_client"+(i+1)+".html";
           p = Runtime.getRuntime().exec(scpCmd);
-          p.waitFor();
+         
+ 	  p.getErrorStream().close();
+          p.getInputStream().close();
+          p.getOutputStream().close();
+         
+ 	  p.waitFor();
           scpCmd[1] =  (String)client.rubbos.getRemoteClients().get(i)
           + ":"+tmpDir+"stat_client"+(i+1)+".html";
           p = Runtime.getRuntime().exec(scpCmd);
+
+	  p.getErrorStream().close();
+          p.getInputStream().close();
+          p.getOutputStream().close();
+ 
           p.waitFor();
         }
       } 
