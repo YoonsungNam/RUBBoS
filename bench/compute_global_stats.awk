@@ -39,7 +39,7 @@ BEGIN {
 	    {
 	      if (count[i] != 0)
 		{
-		  printf "%s</div><TD><div align=right>%.2f %%</div><TD><div align=right>%d</div><TD><div align=right>%d</div><TD><div align=right>%d ms</div><TD><div align=right>%d ms</div><TD><div align=right>%.0f ms</div>\n", stateName[i], 100*count[i]/totalCount, count[i], errors[i], minTime[i], maxTime[i], avgTime[i]\/count[i] >> outputFile;
+		  printf "%s</div><TD><div align=right>%.2f %%</div><TD><div align=right>%d</div><TD><div align=right>%d</div><TD><div align=right>%d ms</div><TD><div align=right>%d ms</div><TD><div align=right>%.0f ms</div>\n", stateName[i], 100*count[i]/totalCount, count[i], errors[i], minTime[i], maxTime[i], avgTime[i]/count[i] >> outputFile;
 		  totalTime += avgTime[i];
 		}
 	    }
@@ -85,9 +85,8 @@ BEGIN {
 	{ # Average session time is the last stat of the table, we close the table here.
 	  if (time == 0)
 	    print "<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>0 second</B></div>" >> outputFile;
-	  else 
-	    print "<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>"time/sessions" seconds<\/B><\/div>" >> outputFile;
-	  
+	  else
+	    print "<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>"time/sessions" seconds</B></div>" >> outputFile;
 	  print "</TABLE><p>" >> outputFile;
 	  headerRow = 0;
 	}
@@ -104,7 +103,6 @@ BEGIN {
 	      if (i == 0)
 		stateName[stateNb] = splited[1];
 	      else if (splited[1] != stateName[stateNb])
-		print splited[1], stateName[stateNb];
 		print "Error line "NR" in "path"stat_client"i".html: Bad state '"splited[1]"' does not match '"stateName[stateNb]"'";
 	      # Skip percentage in splited[2], we'll have to compute that later
 	      count[stateNb]    += splited[3];

@@ -22,9 +22,10 @@ public class Stats
   private long minTime[];
   private long maxTime[];
   private long totalTime[];
+  private long stragglerCount[];
+  private int stragglerTime = 1000;
   private int  nbSessions;   // Number of sessions succesfully ended
   private long sessionsTime; // Sessions total duration
-  private final long MAX_LONG = 99999;
 
 
   /**
@@ -41,6 +42,7 @@ public class Stats
     minTime = new long[nbOfStats];
     maxTime = new long[nbOfStats];
     totalTime = new long[nbOfStats];
+    stragglerCount = new long[nbOfStats];
     reset();
   }
 
@@ -56,9 +58,10 @@ public class Stats
     {
       count[i] = 0;
       error[i] = 0;
-      minTime[i] = MAX_LONG;
+      minTime[i] = Long.MAX_VALUE;
       maxTime[i] = 0;
       totalTime[i] = 0;
+      stragglerCount[i] = 0;
     }
     nbSessions = 0;
     sessionsTime = 0;
@@ -131,6 +134,9 @@ public class Stats
       maxTime[index] = time;
     if (time < minTime[index])
       minTime[index] = time;
+    if (time > stragglerTime) {
+      stragglerCount[index] += 1;
+    }
   }
 
 
@@ -199,6 +205,12 @@ public class Stats
   }
 
 
+  public synchronized long getStragglerCount(int index)
+  {
+    return stragglerCount[index];
+  }
+
+
   /**
    * Get the total number of entries that are collected
    *
@@ -236,6 +248,7 @@ public class Stats
       if (maxTime[i] < anotherStat.getMaxTime(i))
         maxTime[i] = anotherStat.getMaxTime(i);
       totalTime[i] += anotherStat.getTotalTime(i);
+      stragglerCount[i] += anotherStat.getStragglerCount(i);
     }
     nbSessions   += anotherStat.nbSessions;
     sessionsTime += anotherStat.sessionsTime;
@@ -258,7 +271,7 @@ public class Stats
 
     System.out.println("<br><h3>"+title+" statistics</h3><p>");
     System.out.println("<TABLE BORDER=1>");
-    System.out.println("<THEAD><TR><TH>State name<TH>% of total<TH>Count<TH>Errors<TH>Minimum Time<TH>Maximum Time<TH>Average Time<TBODY>");
+    System.out.println("<THEAD><TR><TH>State name<TH>% of total<TH>Count<TH>Errors<TH>Minimum Time<TH>Maximum Time<TH>Average Time<TH>Straggler<TBODY>");
     // Display stat for each state
     for (int i = 0 ; i < getNbOfStats() ; i++)
     {
@@ -266,7 +279,9 @@ public class Stats
       errors += error[i];
       time += totalTime[i];
     }
-
+    long totalMaxTime = 0;
+    long totalMinTime = Long.MAX_VALUE;
+    long totalStragglerCount = 0;
     for (int i = 0 ; i < getNbOfStats() ; i++)
     {
       if ((exclude0Stat && count[i] != 0) || (!exclude0Stat))
@@ -282,17 +297,26 @@ public class Stats
         else
           System.out.print(error[i]);
         System.out.print("</div><TD><div align=right>");
-        if (minTime[i] != MAX_LONG) {
+        if (minTime[i] != Long.MAX_VALUE) {
           System.out.print(minTime[i]);
+          if (totalMinTime > minTime[i]) {
+            totalMinTime = minTime[i];
+          }
         } else {
           System.out.print("0");
+          totalMinTime = 0;
         }
         System.out.print(" ms</div><TD><div align=right>"+maxTime[i]+" ms</div><TD><div align=right>");
+        if (totalMaxTime < maxTime[i]) {
+          totalMaxTime = maxTime[i];
+        }
         int success = count[i] - error[i];
         if (success > 0)
-          System.out.println(totalTime[i]/success+" ms</div>");
+          System.out.print(totalTime[i]/success+" ms</div>");
         else
-           System.out.println("0 ms</div>");
+          System.out.print("0 ms</div>");
+        System.out.println("<TD><div align=right>" + stragglerCount[i] + "</div>");
+        totalStragglerCount += stragglerCount[i];
       }
     }
 
@@ -300,14 +324,15 @@ public class Stats
     if (counts > 0)
     {
       System.out.print("<TR><TD><div align=left><B>Total</B></div><TD><div align=right><B>100 %</B></div><TD><div align=right><B>"+counts+
-                       "</B></div><TD><div align=right><B>"+errors+ "</B></div><TD><div align=center>-</div><TD><div align=center>-</div><TD><div align=right><B>");
+                       "</B></div><TD><div align=right><B>" + errors+ "</B></div><TD><div align=right><B>" + totalMinTime + "ms</B></div><TD><div align=right><B>" + totalMaxTime + "ms</B></div><TD><div align=right><B>");
       counts += errors;
-      System.out.println(time/counts+" ms</B></div>");
+      System.out.print(time/counts+" ms</B></div>");
+      System.out.println("<TD><div align=right><B>" + totalStragglerCount + "</B></div>");
       // Display stats about sessions
-      System.out.println("<TR><TD><div align=left><B>Average throughput</div></B><TD colspan=6><div align=center><B>"+1000*counts/sessionTime+" req/s</B></div>");
-      System.out.println("<TR><TD><div align=left>Completed sessions</div><TD colspan=6><div align=left>"+nbSessions+"</div>");
-      System.out.println("<TR><TD><div align=left>Total time</div><TD colspan=6><div align=left>"+sessionsTime/1000L+" seconds</div>");
-      System.out.print("<TR><TD><div align=left><B>Average session time</div></B><TD colspan=6><div align=left><B>");
+      System.out.println("<TR><TD><div align=left><B>Average throughput</div></B><TD colspan=7><div align=center><B>"+1000*counts/sessionTime+" req/s</B></div>");
+      System.out.println("<TR><TD><div align=left>Completed sessions</div><TD colspan=7><div align=left>"+nbSessions+"</div>");
+      System.out.println("<TR><TD><div align=left>Total time</div><TD colspan=7><div align=left>"+sessionsTime/1000L+" seconds</div>");
+      System.out.print("<TR><TD><div align=left><B>Average session time</div></B><TD colspan=7><div align=left><B>");
       if (nbSessions > 0)
         System.out.print(sessionsTime/(long)nbSessions/1000L+" seconds");
       else

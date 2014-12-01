@@ -587,18 +587,19 @@ public class ClientEmulator
         {
           // The waitFor method only does not work: it hangs forever
 
-	  remoteClientMonitor[i].getErrorStream().close();
+	  /*remoteClientMonitor[i].getErrorStream().close();
           remoteClientMonitor[i].getInputStream().close();
-          remoteClientMonitor[i].getOutputStream().close();
+          remoteClientMonitor[i].getOutputStream().close();*/
 
           if (remoteClientMonitor[i].exitValue() != 0)
           {
             remoteClientMonitor[i].waitFor();
           }
 
+	/*
 	  remoteClient[i].getErrorStream().close();
 	  remoteClient[i].getInputStream().close();
-          remoteClient[i].getOutputStream().close();
+          remoteClient[i].getOutputStream().close();*/
 
           if (remoteClient[i].exitValue() != 0)
           {
@@ -606,15 +607,20 @@ public class ClientEmulator
           }
         }
         System.out.println("test#####0");
+
         webServerMonitor.getErrorStream().close();
         webServerMonitor.getInputStream().close();
 	webServerMonitor.getOutputStream().close();
+
         webServerMonitor.waitFor();
         System.out.println("test#####0.2");
+ 
         dbServerMonitor.getErrorStream().close();
         dbServerMonitor.getInputStream().close();
         dbServerMonitor.getOutputStream().close();
+
         dbServerMonitor.waitFor();
+
         System.out.println("test#####0.5");
       }
 
@@ -654,20 +660,20 @@ public class ClientEmulator
           scpCmd[1] =  (String)client.rubbos.getRemoteClients().get(i)
           + ":"+tmpDir+"trace_client"+(i+1)+".html";
           p = Runtime.getRuntime().exec(scpCmd);
-         
+/*         
  	  p.getErrorStream().close();
           p.getInputStream().close();
           p.getOutputStream().close();
-         
+  */       
  	  p.waitFor();
           scpCmd[1] =  (String)client.rubbos.getRemoteClients().get(i)
           + ":"+tmpDir+"stat_client"+(i+1)+".html";
           p = Runtime.getRuntime().exec(scpCmd);
-
+/*
 	  p.getErrorStream().close();
           p.getInputStream().close();
           p.getOutputStream().close();
- 
+ */
           p.waitFor();
         }
       } 
