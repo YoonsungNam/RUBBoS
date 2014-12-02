@@ -1,0 +1,7 @@
+# Ignore java binary
+*.class
+*.jar
+
+# Ignore flush_cache
+bench/flush_cache
+flush_cache
