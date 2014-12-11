@@ -5,3 +5,7 @@
 # Ignore flush_cache
 bench/flush_cache
 flush_cache
+
+# Ignore result (is there better way to do this?)
+bench/2014*
+bench/2015*
