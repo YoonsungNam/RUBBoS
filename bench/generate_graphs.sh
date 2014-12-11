@@ -5,10 +5,6 @@
 # $3 is the number of clients
 
 export GNUTERM=dumb
-echo 'hantest'
-echo $1
-echo $2
-echo $3
 
 if [ -d $1 ]; then
   # Generate data files
